@@ -21,8 +21,8 @@
 !/configurator/tmp/.keep
 !/runner/tmp/.keep
 
-# Ignore Byebug command history file.
 .byebug_history
+tags
 
 # Save me from my self
 docker-compose.yml
