@@ -1,0 +1,16 @@
+nav.navbar.navbar-default.navbar-fixed-top.navbar-inverse
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed data-toggle="collapse" data-target="#navigation"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link_to 'λ runner', root_path, class: 'navbar-brand'
+
+    .collapse.navbar-collapse#navigation
+      ul.nav.navbar-nav
+        li
+          = link_to 'Type', [:edit, Setting.find_by!(key: 'type')]
+        li
+          = link_to 'Template', [:edit, Setting.find_by!(key: 'template')]

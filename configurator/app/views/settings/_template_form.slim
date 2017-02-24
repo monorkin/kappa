@@ -1,0 +1,8 @@
+.row
+  .col-sm-4
+    table.table
+      tbody
+        - TemplateLoader.call.each do |template|
+          tr
+            td = template.name
+  .col-sm-8

@@ -1,0 +1,28 @@
+# Ignore bundler config.
+/.bundle
+/configurator/.bundle
+/runner/.bundle
+
+# Ignore the default SQLite database.
+/shared/*.sqlite3
+/shared/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/configurator/log/*
+/runner/log/*
+/tmp/*
+/configurator/tmp/*
+/runner/tmp/*
+!/log/.keep
+!/configurator/log/.keep
+!/runner/log/.keep
+!/tmp/.keep
+!/configurator/tmp/.keep
+!/runner/tmp/.keep
+
+# Ignore Byebug command history file.
+.byebug_history
+
+# Save me from my self
+docker-compose.yml

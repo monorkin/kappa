@@ -1,0 +1,16 @@
+name: "API Gateway AWS Proxy"
+json: "json/api_gateway_aws_proxy.json"
+fields:
+  body: "body"
+  headers: "headers"
+  query: "queryStringParameters"
+  path:
+    - "path"
+    -
+      - "pathParameters"
+      - "proxy"
+  method:
+    - "httpMethod"
+    -
+      - "requestContext"
+      - "httpMethod"
