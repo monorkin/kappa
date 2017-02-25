@@ -10,7 +10,7 @@ TODO - When the configurator is finished
 ## Acknowlagments
 
 This project wouldn't have been possible without
-[LambdaCI's](https://github.com/lambci/lambdaci)
+[LambdaCI's](https://github.com/lambci/lambci)
 [docker-lambda](https://github.com/lambci/docker-lambda)
 project. It's the backbone on top of which this application has been built.
 
