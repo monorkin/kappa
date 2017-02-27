@@ -96,13 +96,15 @@ class Runner
   def container_output
     @container_output ||= begin
       container.start
-      container.wait(3.minutes)
+      container.wait(4.minutes)
 
       {
         stdout: sanitize_container_output(container.logs(stdout: true)),
         stderr: sanitize_container_output(container.logs(stderr: true))
       }
     end
+  ensure
+    remove_residual_container
   end
 
   ##
@@ -133,9 +135,20 @@ class Runner
     lines = output.split(/.\x00\x00\x00\x00\x00../im)
 
     sanitized_lines = lines.map do |line|
-      line.gsub(/\e..../m, '').presence
+      line.gsub(/^\e..../, '').gsub(/\e.../m, '').presence
     end
 
     sanitized_lines.compact.join
+  end
+
+
+  ##
+  # Remove residual containers
+  #
+  def remove_residual_container
+    container.stop
+    container.delete(force: true)
+  rescue Docker::Error::NotFoundError
+    nil
   end
 end
