@@ -24,6 +24,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_link_to (1.0.3)
+      actionpack
     activejob (5.0.1)
       activesupport (= 5.0.1)
       globalid (>= 0.3.6)
@@ -192,6 +194,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_link_to
   annotate
   better_errors
   binding_of_caller
