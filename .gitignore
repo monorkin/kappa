@@ -4,8 +4,8 @@
 /runner/.bundle
 
 # Ignore the default SQLite database.
-/shared/*.sqlite3
-/shared/*.sqlite3-journal
+/shared/db/*.sqlite3
+/shared/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
 /log/*
