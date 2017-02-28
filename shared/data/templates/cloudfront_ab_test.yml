@@ -1,0 +1,24 @@
+name: "CloudFront AB Test"
+json: "json/cloudfront_ab_test.json"
+fields:
+  path:
+    -
+      - "Records"
+      - 1
+      - "cf"
+      - "request"
+      - "uri"
+  method:
+    -
+      - "Records"
+      - 1
+      - "cf"
+      - "request"
+      - "method"
+  headers:
+    -
+      - "Records"
+      - 1
+      - "cf"
+      - "request"
+      - "headers"

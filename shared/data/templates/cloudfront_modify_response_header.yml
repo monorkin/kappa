@@ -1,0 +1,10 @@
+name: "CloudFront Modify Respnse Header"
+json: "json/cloudfront_modify_response_header.json"
+fields:
+  headers:
+    -
+      - "Records"
+      - 1
+      - "cf"
+      - "response"
+      - "headers"

@@ -1,0 +1,27 @@
+{
+  "Records": [
+    {
+      "cf": {
+        "configuration": {
+          "distributionId": "EXAMPLE"
+        },
+        "response": {
+          "status": "200",
+          "headers": {
+            "Last-Modified": [
+              "2016-11-25"
+            ],
+            "Vary": [
+              "*"
+            ],
+            "X-Amz-Meta-Last-Modified": [
+              "2016-01-01"
+            ]
+          },
+          "statusDescription": "HTTP OK",
+          "httpVersion": "2.0"
+        }
+      }
+    }
+  ]
+}
