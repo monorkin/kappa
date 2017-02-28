@@ -1,3 +1,3 @@
-Setting.create(key: 'type', value: 'node')
+Setting.create(key: 'type', value: 'Vanilla')
 Setting.create(key: 'template', value: '{}')
 
