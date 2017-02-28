@@ -46,7 +46,7 @@ class Runner
       interpolate_body
       interpolate_headers
       interpolate_path
-      template.data["json"]
+      template.data['json']
     end
 
     private
@@ -59,7 +59,7 @@ class Runner
     #
     def interpolate_value(keys, value)
       keys = keys.dup
-      json = template.data["json"]
+      json = template.data['json']
       key = keys.pop
       return unless key
 
