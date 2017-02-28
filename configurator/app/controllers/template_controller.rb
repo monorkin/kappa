@@ -1,9 +1,9 @@
-class TypeController < ApplicationController
+class TemplateController < ApplicationController
   attr_accessor :record
   attr_accessor :presenter
 
   def edit
-    self.presenter = Type::EditPresenter.new
+    self.presenter = presenter
   end
 
   def update
@@ -11,16 +11,25 @@ class TypeController < ApplicationController
     self.record.attributes = permitted_params
 
     if self.record.save
-      redirect_to [:edit, :type]
+      redirect_to [:edit, :template]
     else
       render 'edit'
     end
   end
 
+  def data
+    name = params[:name]
+    template = presenter.templates.select do |template|
+      template.name == name
+    end.first
+
+    render json: template.data
+  end
+
   private
 
   def presenter
-    Type::EditPresenter.new
+    @presenter ||= Template::EditPresenter.new
   end
 
   def load_record

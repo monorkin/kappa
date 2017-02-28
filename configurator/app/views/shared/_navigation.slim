@@ -11,4 +11,4 @@ nav.navbar.navbar-default.navbar-fixed-top.navbar-inverse
     .collapse.navbar-collapse#navigation
       ul.nav.navbar-nav
         = active_link_to 'Type', [:edit, :type], wrap_tag: :li
-        = active_link_to 'Template', [:edit, Setting.find_by!(key: 'template')], wrap_tag: :li
+        = active_link_to 'Template', [:edit, :template], wrap_tag: :li

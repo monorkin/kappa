@@ -1,0 +1,7 @@
+= simple_form_for presenter.record, url: [:template], method: :put do |f|
+  = f.input :value, as: :hidden, inline_label: false, label: false, html_options: { id: 'editor' }
+  #editor = f.object.value
+
+  button.btn.btn-success.btn-lg
+    = icon('check')
+    | Save

@@ -1,0 +1,6 @@
+= simple_form_for presenter.record, url: [:type], method: :put do |f|
+  = f.input :value, collection: presenter.available_types, include_blank: false, inline_label: false, label: false
+
+  button.btn.btn-success.btn-lg
+    = icon('check')
+    | Save

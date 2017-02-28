@@ -1,0 +1,12 @@
+.row
+  .col-xs-12
+    h1 Change template
+  .col-xs-3
+    h2 Presets
+    #templates.row
+      - @presenter.templates.each do |template|
+        .col-xs-12
+          = link_to template.name, [:data, :template, { name: template.name }], data: { preset: true }
+  .col-xs-9
+    h2 Edit
+    = render 'form', presenter: @presenter
