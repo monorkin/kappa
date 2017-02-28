@@ -9,9 +9,9 @@ class Runner
     # Mappings of human understandable strings to container labels aka. types.
     #
     TYPE_LABEL_MAPPING = {
-      'vanilla' => nil,
-      'nodejs4.3' => 'nodejs',
-      'python2.7' => 'python2.7'
+      'Vanilla' => nil,
+      'NodeJS 4.3' => 'nodejs',
+      'Python 2.7' => 'python2.7'
     }.freeze
 
     ##
