@@ -6,11 +6,9 @@ nav.navbar.navbar-default.navbar-fixed-top.navbar-inverse
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      = link_to 'λ runner', root_path, class: 'navbar-brand'
+      = active_link_to 'Kappa', root_path, class: 'navbar-brand'
 
     .collapse.navbar-collapse#navigation
       ul.nav.navbar-nav
-        li
-          = link_to 'Type', [:edit, Setting.find_by!(key: 'type')]
-        li
-          = link_to 'Template', [:edit, Setting.find_by!(key: 'template')]
+        = active_link_to 'Type', [:edit, :type], wrap_tag: :li
+        = active_link_to 'Template', [:edit, Setting.find_by!(key: 'template')], wrap_tag: :li
