@@ -1,8 +1,29 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 
 body {
   padding-top: 70px;
+}
+
+.btn {
+  i.fa {
+    margin-right: 4px;
+  }
+}
+
+#editor, #templates {
+  height: 500px;
+  margin: {
+    bottom: 2em;
+  }
+
+  .ace_editor {
+    height: 100%;
+  }
+}
+
+#templates {
+  overflow-y: scroll;
 }
