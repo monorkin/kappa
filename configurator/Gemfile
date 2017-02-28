@@ -17,6 +17,7 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks', '~> 5'
 gem 'active_link_to'
+gem 'simple_form'
 
 group :development, :test do
   gem 'binding_of_caller'
