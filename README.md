@@ -5,11 +5,16 @@ server on your local machine. Making testing and development faster and easier.
 
 ## Usage
 
-TODO - When the configurator is finished
+TODO
 
-## Acknowlagments
+## Acknowledgments
 
-This project wouldn't have been possible without
+This project wouldn't have been possible without the folks at
+[FloatingPoint](https://floatingpoint.io) who sponsored it's development.
+
+[![FloatingPoint logo](/assets/fp_logo.svg)](https://floatingpoint.io)
+
+And the folks behind
 [LambdaCI's](https://github.com/lambci/lambci)
 [docker-lambda](https://github.com/lambci/docker-lambda)
 project. It's the backbone on top of which this application has been built.
