@@ -19,8 +19,8 @@ docker run \
     stankec/kappa
 ```
 
-This will start a webserver on `http://localhost:3000` that will simulate an
-AWS Lambda. Ti will also start another webserver on `http://localhost:3001`
+This will start a web server on `http://localhost:3000` that will simulate an
+AWS Lambda. Ti will also start another web server on `http://localhost:3001`
 where you can configure what type of Lambda you want to run and which event
 template should it use.
 
@@ -34,17 +34,17 @@ docker run \
     stankec/kappa
 ```
 
-Kappa needs acces to the host's `docker.sock` to be able to spawn Lambda
+Kappa needs access to the host's `docker.sock` to be able to spawn Lambda
 containers to execute various tasks. The `PROJECT_ROOT` env variable defines
-which project to run as the Lambda code. `HANDLER` specifies whic function in
-which file to use as the entrypoint for the Lambda.
+which project to run as the Lambda code. `HANDLER` specifies which function in
+which file to use as the entry point for the Lambda.
 
 ### Environment variables
 
 All environment variables from the Kappa container will be passed to the spawned
 lambda container. E.g. if the Kappa container has an ENV variable `FOO` with the
 value `bar`, then the spawned Lambda container will also have an ENV variable
-`FOO` with the value `bar`. This is the intended way of passing enviroment
+`FOO` with the value `bar`. This is the intended way of passing environment
 variables to the Lambda.
 
 ### Docker-Compose
@@ -83,12 +83,12 @@ to run in the Lambda.
 You can see all available templates in the
 [`shared/data/tempaltes`](/shared/data/tempaltes) directory.
 
-The template whic is used to run the Lambda can be changed in the configurator.
+The template which is used to run the Lambda can be changed in the configurator.
 __Note:__ The saved template doesn't change the preset template and that
-it will dissapear when the container is restarted.
+it will disappear when the container is restarted.
 
 Each template __needs__ to have at least two keys: `name` and `json`. Those keys
-are self-explanitory:
+are self-explanatory:
 
 * `name` - Name of the template (used only for display purposes)
 * `json` - Relative path to a file containing the template's raw JSON payload
@@ -129,7 +129,7 @@ path:
     - "b"
 ```
 
-If a template has multiple fields thet need to be mapped to the same data from
+If a template has multiple fields that need to be mapped to the same data from
 the HTTP request then the value of the key can be set as an array of arrays:
 
 ```Ruby
@@ -162,9 +162,9 @@ project. It's the backbone on top of which this application has been built.
 
 ## Why kappa?
 
-Well, if AWS Lambdas are the-bleeding-edge™ enabeling 'serverless'
-infrastructure then this is a step backwards - back to a server-client
-infrasturcture. The Greek letter preceding lambda (λ) is kappa (κ)...
+Well, if AWS Lambdas are the-bleeding-edge™ enabling 'serverless'
+infrastructure then this is a step backward - back to a server-client
+infrastructure. The Greek letter preceding lambda (λ) is kappa (κ)...
 Very clever, I know 🤣
 
 ## License
