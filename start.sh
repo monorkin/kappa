@@ -4,8 +4,7 @@ cd /usr/src/app
 
 echo "Booting configurator..."
 cd configurator
-# rake db:drop db:create db:migrate
-rake db:create db:migrate
+rake db:create db:migrate db:seed
 ./bin/rails server \
   -b 0.0.0.0 \
   -p 8080 \
@@ -16,7 +15,6 @@ cd ..
 
 echo "Booting runner..."
 cd runner
-# rake db:drop db:create db:migrate
 rake db:create db:migrate
 ./bin/rails server \
   -b 0.0.0.0 \
