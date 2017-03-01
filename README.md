@@ -16,8 +16,8 @@ docker run \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -p "3000:3000" \
     -p "3001:8080" \
-    -e PROJECT_ROOT="$(pwd)" \
-    -e HANDLER="bin/index.handler" \
+    -e "PROJECT_ROOT=/path/to/your/project" \
+    -e "HANDLER=bin/index.handler" \
     stankec/kappa
 ```
 
@@ -31,8 +31,8 @@ The bare essential arguments for running the container are:
 ```Bash
 docker run \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    -e PROJECT_ROOT="$(pwd)" \
-    -e HANDLER="bin/index.handler" \
+    -e "PROJECT_ROOT=/path/to/your/project" \
+    -e "HANDLER=bin/index.handler" \
     stankec/kappa
 ```
 
