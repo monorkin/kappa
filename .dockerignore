@@ -1,0 +1,5 @@
+/assets/
+docker-compose.yml
+.env
+tags
+README.md
