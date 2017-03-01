@@ -1,0 +1,2 @@
+name: "DynamoDB Update"
+json: "json/dynamodb_update.json"

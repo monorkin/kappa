@@ -1,0 +1,2 @@
+name: "AWS Config Periodic Rule"
+json: "json/aws_config_periodic_rule.json"
