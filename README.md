@@ -12,7 +12,7 @@ TODO
 This project wouldn't have been possible without the folks at
 [FloatingPoint](https://floatingpoint.io) who sponsored it's development.
 
-[![FloatingPoint logo](/assets/fp_logo.png | width=300)](https://floatingpoint.io)
+[![FloatingPoint logo](/assets/fp_logo.png =300x)](https://floatingpoint.io)
 
 And the folks behind
 [LambdaCI's](https://github.com/lambci/lambci)
