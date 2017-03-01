@@ -3,6 +3,8 @@
 Kappa is a local AWS Lambda runner. It enables you to run Lambdas as a web
 server on your local machine. Making testing and development faster and easier.
 
+![Demonstartion video](http://i.giphy.com/3o7bu7zFFPcMP3al8Y.gif)
+
 ## Usage
 
 To run Kappa, you will need to have [Docker](https://www.docker.com/) installed
@@ -145,6 +147,15 @@ path:
     - "a"
     - "b"
 ```
+
+## Things to note
+
+Everything the Lambda outputs to `STDOUT` will be used as the result / response.
+And ewerything that is output to `STDERR` will be visible in the logs of the
+Kappa container. The Lambda runner, by default, outputs a JSON object with the
+response to `STDOUT` when it's finished.
+
+In JavaScript applications `console.log` is redirected to `STDERR`.
 
 ## Acknowledgments
 
