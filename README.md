@@ -13,6 +13,9 @@ This project wouldn't have been possible without the folks at
 [FloatingPoint](https://floatingpoint.io) who sponsored it's development.
 
 [![FloatingPoint logo](/assets/fp_logo.png =300x)](https://floatingpoint.io)
+<a href="https://floatingpoint.io">
+  <img src="/Stankec/kappa/raw/master/assets/fp_logo.png" alt="FloatingPoint logo" width="300">
+</a>
 
 And the folks behind
 [LambdaCI's](https://github.com/lambci/lambci)
