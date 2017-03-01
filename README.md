@@ -6,7 +6,8 @@ server on your local machine. Making testing and development faster and easier.
 ## Usage
 
 To run Kappa, you will need to have [Docker](https://www.docker.com/) installed
-on your machine and you need to execute the following command:
+on your machine and you need to execute the following command in the root
+directory of your project:
 
 ```Bash
 docker run \
@@ -74,6 +75,8 @@ services:
 ```
 
 And then run `docker-compose up` to start Kappa.
+__Note:__ This file assumes it's in the root directory of the project you want
+to run in the Lambda.
 
 ### Templates
 
