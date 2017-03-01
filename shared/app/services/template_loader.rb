@@ -6,7 +6,7 @@ class TemplateLoader
   end
 
   def call
-    @templates ||= templates
+    @templates ||= templates.sort_by(&:name)
   end
 
   private
