@@ -12,8 +12,6 @@ TODO
 This project wouldn't have been possible without the folks at
 [FloatingPoint](https://floatingpoint.io) who sponsored it's development.
 
-[![FloatingPoint logo](/assets/fp_logo.png)](https://floatingpoint.io)
-
 <a href="https://floatingpoint.io">
   <img src="/assets/fp_logo.png" alt="FloatingPoint logo" width="300">
 </a>
