@@ -1,0 +1,2 @@
+name: "AWS Config Change Triggered Rule - Oversized"
+json: "json/aws_config_change_triggered_rule_oversized.json"

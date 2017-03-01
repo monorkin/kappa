@@ -1,0 +1,2 @@
+name: "API Gateway Authorizer"
+json: "json/api_gateway_authorizer.json"

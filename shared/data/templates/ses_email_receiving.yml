@@ -1,0 +1,2 @@
+name: "SES Email Receiving"
+json: "json/ses_email_receiving.json"
