@@ -160,7 +160,7 @@ path:
 ## Things to note
 
 Everything the Lambda outputs to `STDOUT` will be used as the result / response.
-And ewerything that is output to `STDERR` will be visible in the logs of the
+And everything that is output to `STDERR` will be visible in the logs of the
 Kappa container. The Lambda runner, by default, outputs a JSON object with the
 response to `STDOUT` when it's finished.
 
