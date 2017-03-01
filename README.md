@@ -20,7 +20,7 @@ docker run \
 ```
 
 This will start a web server on `http://localhost:3000` that will simulate an
-AWS Lambda. Ti will also start another web server on `http://localhost:3001`
+AWS Lambda. It will also start another web server on `http://localhost:3001`
 where you can configure what type of Lambda you want to run and which event
 template should it use.
 
@@ -81,7 +81,7 @@ to run in the Lambda.
 ### Templates
 
 You can see all available templates in the
-[`shared/data/tempaltes`](/shared/data/tempaltes) directory.
+[`shared/data/templates`](/shared/data/templates) directory.
 
 The template which is used to run the Lambda can be changed in the configurator.
 __Note:__ The saved template doesn't change the preset template and that
