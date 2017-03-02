@@ -11,6 +11,19 @@ class ApplicationController < ActionController::Base
     type = Setting.type
     template = Setting.template
     result = Runner.call(request, type, template)
+    set_headers(result[:headers])
     render result
+  end
+
+  private
+
+  ##
+  # Sets the input Hash a the response's headers
+  #
+  def set_headers(headers_map)
+    return unless headers_map
+    headers_map.each do |key, value|
+      response.set_header(key, value)
+    end
   end
 end
