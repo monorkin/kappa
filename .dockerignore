@@ -1,4 +1,5 @@
 /assets/
+/examples/
 docker-compose.yml
 .env
 tags
