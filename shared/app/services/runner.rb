@@ -50,11 +50,12 @@ class Runner
   #
   def call
     log_container_errors
+    log_container_output
 
     {
-       response_type => result['body'],
-       status: result['statusCode'],
-       headers: result['headers']
+      body: result['body'],
+      status: result['statusCode'],
+      headers: result['headers']
     }
   end
 
@@ -69,13 +70,11 @@ class Runner
   end
 
   ##
-  # Inferes and memoizes the response type from the request.
-  # If no response type can be infered JSON is used as the default.
+  # Log the output from the container - usefull for debugging
   #
-  # @return [Symbol] The response type
-  #
-  def response_type
-    @response_type ||= request.format.symbol || :json
+  def log_container_output
+    return unless container_output[:stdout].present?
+    Rails.logger.info(container_output[:stdout])
   end
 
   ##
