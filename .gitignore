@@ -3,6 +3,11 @@
 /configurator/.bundle
 /runner/.bundle
 
+# Example builds
+/examples/api_gateway_proxy/node_modules/
+/examples/api_gateway_proxy/bin/
+/examples/api_gateway_proxy/*.log
+
 # Ignore the default SQLite database.
 /shared/db/*.sqlite3
 /shared/db/*.sqlite3-journal
@@ -20,7 +25,6 @@
 !/tmp/.keep
 !/configurator/tmp/.keep
 !/runner/tmp/.keep
-
 .byebug_history
 tags
 
