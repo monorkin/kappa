@@ -53,9 +53,10 @@ class Runner
     log_container_output
 
     {
-      body: result['body'],
+      inline: result['body'],
       status: result['statusCode'],
-      headers: result['headers']
+      headers: result['headers'],
+      content_type: content_type
     }
   end
 
@@ -75,6 +76,17 @@ class Runner
   def log_container_output
     return unless container_output[:stdout].present?
     Rails.logger.info(container_output[:stdout])
+  end
+
+  def content_type
+    @content_type ||= begin
+      raw_headers = result['headers'] || {}
+      sanitized_headers =
+        raw_headers.each_with_object({}) do |(key, value), object|
+          object[key.to_s.downcase] = value
+        end
+      sanitized_headers['content-type'] || 'text/plain'
+    end
   end
 
   ##

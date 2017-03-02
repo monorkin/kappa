@@ -46,6 +46,8 @@ class Runner
       interpolate_body
       interpolate_headers
       interpolate_path
+      interpolate_method
+      interpolate_query
       template.data['json']
     end
 
@@ -119,6 +121,24 @@ class Runner
     def interpolate_path
       template.path_fields.each do |keys|
         interpolate_value(keys, request.path)
+      end
+    end
+
+    ##
+    # Interpolate the request's method in to the template's
+    #
+    def interpolate_method
+      template.method_fields.each do |keys|
+        interpolate_value(keys, request.method)
+      end
+    end
+
+    ##
+    # Interpolate the request's query in to the template's
+    #
+    def interpolate_query
+      template.query_fields.each do |keys|
+        interpolate_value(keys, request.params)
       end
     end
   end

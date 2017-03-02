@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
     template = Setting.template
     result = Runner.call(request, type, template)
     set_headers(result[:headers])
-    render result
+    render **result
   end
 
   private
