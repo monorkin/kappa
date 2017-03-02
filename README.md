@@ -26,12 +26,13 @@ AWS Lambda. It will also start another web server on `http://localhost:3001`
 where you can configure what type of Lambda you want to run and which event
 template should it use.
 
-__Before making any requests to `localhost:3000` go to `localhost:3001` and pick
-a template and save. Else the Lambda will return `null` for all requests.__
+__By default the API Gateway Proxy template will be used.__
 
-If you don't want to do this each time, reconsider mounting the database of
-the container (located at `/usr/src/app/shared/db/database.sqlite3`) to the
+If you want to persist your saved template, reconsider mounting the database of
+the container (located at `/usr/src/app/shared/db/database.sqlite3`) on the
 host's filesystem.
+(e.g. by adding the following flag
+`-v ./tmp_db.sqlite3:/usr/src/app/shared/db/database.sqlite3`)
 
 ### Basic configuration
 
@@ -171,9 +172,7 @@ In JavaScript applications `console.log` is redirected to `STDERR`.
 This project wouldn't have been possible without the folks at
 [FloatingPoint](https://floatingpoint.io) who sponsored it's development.
 
-<a href="https://floatingpoint.io">
-  <img src="/assets/fp_logo.png" alt="FloatingPoint logo" width="300">
-</a>
+[![FloatingPoint logo](/assets/resized_fp_logo.png)](https://floatingpoint.io)
 
 And the folks behind
 [LambdaCI's](https://github.com/lambci/lambci)
